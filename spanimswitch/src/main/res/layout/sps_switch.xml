@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/i_icon"
+        android:layout_width="@dimen/sps_lpr_sz_100"
+        android:layout_height="@dimen/sps_lpr_sz_100"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp" />
+
+    <TextView
+        android:id="@+id/i_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/i_icon"
+        android:layout_alignStart="@+id/i_icon"
+        android:layout_alignEnd="@+id/i_icon"
+        android:gravity="center"
+        android:text="@string/title_gender">
+    </TextView>
+
+</LinearLayout>
