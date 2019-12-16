@@ -234,7 +234,7 @@ public class SpaSwitch extends RelativeLayout {
         return iText.getText().toString();
     }
 
-    public SpaSwitch setDefaultValue(int val){
+    public SpaSwitch setValue(int val){
         SwitchView(val);
         return this;
     }

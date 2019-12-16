@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         sVal.add(new SpaSwitch.SpaSwitchVal("C",getResources().getDrawable(R.drawable.i_male)));
         sVal.add(new SpaSwitch.SpaSwitchVal("d",getResources().getDrawable(R.drawable.ic_launcher_background)));
         SPA.setListValus(sVal);
-        SPA.setDefaultValue(1);
+        SPA.setValue(1);
 
     }
 }
