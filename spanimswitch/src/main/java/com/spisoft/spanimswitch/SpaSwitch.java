@@ -95,7 +95,7 @@ public class SpaSwitch extends RelativeLayout {
                 iText.setVisibility(GONE);
 
             Drawable _Src_Background = typedArray.getDrawable(R.styleable.SpaSwitch_SrcBackground);
-            if (_Src_Background != null) IBackGround = _Src_Background;
+            if (_Src_Background != null) this.setBackground(_Src_Background);
 
             if (typedArray.getBoolean(R.styleable.SpaSwitch_SetDefault, false)) mVal = 1;
             SetAnimate = typedArray.getInt(R.styleable.SpaSwitch_AnimateType, 0);
@@ -112,10 +112,12 @@ public class SpaSwitch extends RelativeLayout {
         iIcon.setOnLongClickListener(new OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                mVal = 0;
-                SwitchView(mVal);
-                if (mListener != null)
-                    mListener.onEvent();
+                if(IBackGround != null) {
+                    mVal = 0;
+                    SwitchView(mVal);
+                    if (mListener != null)
+                        mListener.onEvent();
+                }
                 return true;
             }
         });
@@ -244,6 +246,11 @@ public class SpaSwitch extends RelativeLayout {
         return this;
     }
 
+    public SpaSwitch setIcon(Drawable drawable){
+        if(drawable == null) setValue(1);
+        this.IBackGround = drawable;
+        return this;
+    }
 //    public SpaSwitch setListValu(String[] listValue){
 //        this.ListValue = listValue;
 //        return this;
@@ -254,7 +261,8 @@ public class SpaSwitch extends RelativeLayout {
 //        return this;
 //    }
 
-    public SpaSwitch setListValus(List<SpaSwitchVal> values){
+    public SpaSwitch setListValues(List<SpaSwitchVal> values){
+//        this.Values.clear();
         this.Values = values;
         return this;
     }
